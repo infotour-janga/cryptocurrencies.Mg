@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v6.1.4, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <link rel="shortcut icon" href="assets/images/logo-izy-4-you-128x128-1-128x128.png" type="image/x-icon">
   <meta name="description" content="Site web pour assister les jeunes dans la recherche d'emploi à Madagascar.">
   
@@ -17,6 +17,292 @@
   <link rel="stylesheet" href="assets/socicon/css/styles.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=ZTDiDc"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=ZTDiDc" type="text/css">
+  <style>
+/* === CORRECTIONS RESPONSIVE MOBILE === */
+
+/* 1. Empêcher débordement */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.container {
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* 2. Menu mobile */
+@media (max-width: 991px) {
+  .navbar-toggler {
+    display: block !important;
+    z-index: 9999;
+  }
+  
+  .hamburger {
+    display: flex !important;
+    flex-direction: column;
+  }
+  
+  .navbar-collapse {
+    background: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .navbar-nav {
+    flex-direction: column !important;
+    padding: 15px 0;
+  }
+  
+  .nav-item {
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+/* 3. Header texte responsive */
+#header1-i h1.display-1 {
+  font-size: 2.5rem !important;
+}
+
+#header1-i p.display-7 {
+  font-size: 1.1rem !important;
+}
+
+@media (max-width: 768px) {
+  #header1-i h1.display-1 {
+    font-size: 1.8rem !important;
+  }
+  
+  #header1-i p.display-7 {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #header1-i h1.display-1 {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* 4. Slider CV - cartes responsive */
+@media (max-width: 768px) {
+  .embla__slide {
+    flex: 0 0 90% !important;
+    min-width: 280px !important;
+    max-width: 350px !important;
+  }
+  
+  .slider-image .item-wrapper {
+    min-height: auto !important;
+  }
+  
+  .slider-image .item-img {
+    height: 200px !important;
+    overflow: hidden;
+  }
+  
+  .slider-image .item-img img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+  
+  .slider-image .item-content {
+    padding: 15px !important;
+  }
+  
+  .slider-image .item-title {
+    font-size: 1.2rem !important;
+    margin-bottom: 10px !important;
+  }
+  
+  .slider-image .mbr-text {
+    font-size: 0.9rem !important;
+  }
+  
+  .slider-image .item-footer {
+    padding: 0 15px 15px !important;
+  }
+}
+
+/* 5. Boutons toujours visibles */
+.item-btn,
+.btn {
+  display: inline-block !important;
+  padding: 10px 25px !important;
+  min-height: 40px !important;
+  line-height: 1.5 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 576px) {
+  .item-btn,
+  .mbr-section-btn .btn {
+    width: auto !important;
+    min-width: 120px !important;
+    max-width: 200px !important;
+    margin: 10px auto !important;
+  }
+}
+
+/* 6. Services payants - grille */
+@media (max-width: 991px) {
+  .features4 .row.mt-4 {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  
+  .features4 .item {
+    width: 100% !important;
+    max-width: 400px !important;
+    margin-bottom: 25px !important;
+  }
+}
+
+.features4 .item-img {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.features4 .item-img img {
+  max-width: 120px !important;
+  height: auto !important;
+  display: inline-block !important;
+}
+
+.features4 .item-content {
+  padding: 15px !important;
+  text-align: center;
+}
+
+.features4 .item-footer {
+  text-align: center;
+  padding: 10px 15px !important;
+}
+
+/* 7. FAQ responsive */
+@media (max-width: 768px) {
+  .content17 .card {
+    margin-bottom: 12px !important;
+  }
+  
+  .content17 .card-header {
+    padding: 12px 15px !important;
+  }
+  
+  .content17 .panel-title-edit {
+    font-size: 0.95rem !important;
+    line-height: 1.3 !important;
+    padding-right: 35px !important;
+    display: block !important;
+  }
+  
+  .content17 .sign {
+    position: absolute !important;
+    right: 15px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+  
+  .content17 .panel-body {
+    padding: 15px !important;
+  }
+  
+  .content17 .panel-text {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* 8. Titres sections responsive */
+.mbr-section-title.display-2 {
+  font-size: 2rem !important;
+}
+
+.mbr-section-subtitle.display-5 {
+  font-size: 1.1rem !important;
+}
+
+@media (max-width: 768px) {
+  .mbr-section-title.display-2 {
+    font-size: 1.6rem !important;
+    padding: 0 10px !important;
+  }
+  
+  .mbr-section-subtitle.display-5 {
+    font-size: 1rem !important;
+    padding: 0 10px !important;
+  }
+}
+
+/* 9. Footer responsive */
+@media (max-width: 768px) {
+  .footer3 .row-links {
+    width: 100% !important;
+  }
+  
+  .footer3 .foot-menu {
+    flex-direction: column !important;
+    padding: 0 !important;
+    gap: 8px !important;
+  }
+  
+  .footer3 .foot-menu-item {
+    text-align: center !important;
+    margin: 0 !important;
+  }
+  
+  .footer3 .row-copirayt {
+    margin-top: 20px !important;
+  }
+}
+
+/* 10. Images toujours dans leur cadre */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* 11. Sections espacement mobile */
+@media (max-width: 768px) {
+  section[data-bs-version] {
+    padding: 35px 10px !important;
+  }
+  
+  .mbr-section-head {
+    margin-bottom: 25px !important;
+  }
+}
+
+/* 12. Navigation fixe */
+.navbar-fixed-top {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 1030 !important;
+}
+
+body {
+  padding-top: 70px !important;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 65px !important;
+  }
+}
+</style>
 
   
   
